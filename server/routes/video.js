@@ -48,4 +48,17 @@ router.get("/getVideos", (req, res) => {
 
 });
 
+router.post("/uploadVideo", (req, res) => {
+
+    const video = new Video(req.body)
+
+    video.save((err, video) => {
+        if(err) return res.status(400).json({ success: false, err })
+        return res.status(200).json({
+            success: true 
+        })
+    })
+
+});
+
 module.exports = router;
