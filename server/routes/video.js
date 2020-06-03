@@ -58,7 +58,6 @@ router.post("/uploadVideo", (req, res) => {
             success: true 
         })
     })
-
 });
 
 module.exports = router;
