@@ -20,7 +20,7 @@ const Catogory = [
   { value: 0, label: "Sports" },
 ];
 
-function UploadVideoPage() {
+function UploadVideoPage(props) {
   const user = useSelector((state) => state.user);
 
   const [title, setTitle] = useState("");
