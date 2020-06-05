@@ -21,6 +21,8 @@ const Catogory = [
 ];
 
 function UploadVideoPage() {
+  const user = useSelector((state) => state.user);
+
   const [title, setTitle] = useState("");
   const [Description, setDescription] = useState("");
   const [privacy, setPrivacy] = useState(0);
