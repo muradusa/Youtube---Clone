@@ -75,7 +75,8 @@ function UploadVideoPage(props) {
       thumbnail: Thumbnail,
     };
 
-    axios.post("/api/video/uploadVideo", variables).then((response) => {
+    axios.post("/api/video/uploadVideo", variables)
+    .then((response) => {
       if (response.data.success) {
         alert("video Uploaded Successfully");
         props.history.push("/");
@@ -142,11 +143,11 @@ function UploadVideoPage(props) {
               </div>
             )}
           </Dropzone>
-          {Thumbnail !== "" && (
+          {Thumbnail !== "" && 
             <div>
               <img src={`http://localhost:5000/${Thumbnail}`} alt="haha" />
             </div>
-          )}
+          }
         </div>
 
         <br />
