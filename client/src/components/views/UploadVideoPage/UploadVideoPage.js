@@ -94,7 +94,9 @@ function UploadVideoPage(props) {
     console.log(files);
     formData.append("file", files[0]);
 
-    axios.post("/api/video/uploadfiles", formData, config).then((response) => {
+    axios.post("/api/video/uploadfiles", formData, config)
+    .then((response) => {
+      console.log(response)
       if (response.data.success) {
         let variable = {
           filePath: response.data.filePath,
