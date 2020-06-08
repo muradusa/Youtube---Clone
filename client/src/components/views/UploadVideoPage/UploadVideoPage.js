@@ -12,7 +12,7 @@ const Private = [
   { value: 1, label: "Public" },
 ];
 
-const Catogory = [
+const Category = [
   { value: 0, label: "Film & Animation" },
   { value: 0, label: "Autos & Vehicles" },
   { value: 0, label: "Music" },
@@ -35,7 +35,7 @@ function UploadVideoPage(props) {
     setTitle(event.currentTarget.value);
   };
 
-  const handleChangeDecsription = (event) => {
+  const handleChangeDescription = (event) => {
     setDescription(event.currentTarget.value);
   };
   const handleChangeOne = (event) => {
@@ -157,7 +157,7 @@ function UploadVideoPage(props) {
         <br />
         <br />
         <label>Description</label>
-        <TextArea onChange={handleChangeDecsription} value={Description} />
+        <TextArea onChange={handleChangeDescription} value={Description} />
         <br />
         <br />
 
@@ -172,7 +172,7 @@ function UploadVideoPage(props) {
         <br />
 
         <select onChange={handleChangeTwo}>
-          {Catogory.map((item, index) => (
+          {Category.map((item, index) => (
             <option key={index} value={item.label}>
               {item.label}
             </option>
