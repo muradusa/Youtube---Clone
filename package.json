@@ -1,7 +1,7 @@
 {
   "name": "rijiytube",
   "version": "1.0.0",
-  "description": "Youtube Clone MERN stack",
+  "description": "Youtube Clone MERN",
   "main": "index.js",
   "engine": {
     "node": "12.14.1",
