@@ -6,7 +6,7 @@ const { Dislike } = require("../models/Dislike");
 const { auth } = require("../middleware/auth");
 
 //=================================
-//             Likes DisLikes
+//             Likes DisLikes, i got a lot of studying to do
 //=================================
 
 router.post("/getLikes", (req, res) => {
