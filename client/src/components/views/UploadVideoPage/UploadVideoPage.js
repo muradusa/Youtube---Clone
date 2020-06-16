@@ -110,6 +110,7 @@ function UploadVideoPage(props) {
           if (response.data.success) {
             setDuration(response.data.fileDuration);
             setThumbnail(response.data.thumbsFilePath);
+            console.log(response.data.thumbsFilePath)
           } else {
             alert("Failed to make the thumbnails");
           }
