@@ -148,7 +148,8 @@ function UploadVideoPage(props) {
           </Dropzone>
           {Thumbnail !== "" && 
             <div>
-              <img src={`http://localhost:5000/${Thumbnail}`} alt="haha" />
+              <img src={`https://fathomless-sands-89545.herokuapp.com/${Thumbnail}`} alt="haha" />
+              {/* <img src={`http://localhost:5000/${Thumbnail}`} alt="haha" /> */}
             </div>
           }
         </div>
