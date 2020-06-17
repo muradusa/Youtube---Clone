@@ -52,7 +52,7 @@ function DetailVideoPage(props) {
             <Row>
                 <Col lg={18} xs={24}>
                     <div className="postPage" style={{ width: '100%', padding: '3rem 4em' }}>
-                        <video style={{ width: '100%' }} src={`http://localhost:5000/${Video.filePath}`} controls></video>
+                        <video style={{ width: '100%' }} src={`https://fathomless-sands-89545.herokuapp.com/${Video.filePath}`} controls></video>
 
                         <List.Item
                             actions={[
