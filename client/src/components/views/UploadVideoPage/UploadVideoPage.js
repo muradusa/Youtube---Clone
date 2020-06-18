@@ -92,8 +92,8 @@ function UploadVideoPage(props) {
       header: { "content-type": "multipart/form-data" },
     };
     console.log(files);
-    formData.append("file", files[0]);
-    console.log(formData);
+    formData.append("file", files[0]).then(console.log(formData));
+    
 
     axios.post("/api/video/uploadfiles", formData, config)
     .then((response) => {
