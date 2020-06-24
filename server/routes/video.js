@@ -10,7 +10,6 @@ const { Subscriber } = require("../models/Subscriber");
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/')
-        // cb(null, 'client/uploads/')
     },
     filename: (req, file, cb) => {
         cb(null, `${Date.now()}_${file.originalname}`)
@@ -60,7 +59,6 @@ router.post("/thumbnail", (req, res) => {
         .on('filenames', function (filenames) {
             console.log('Will generate ' + filenames.join(', '))
             thumbsFilePath = "uploads/thumbnails/" + filenames[0];
-            // thumbsFilePath = "client/uploads/thumbnails/" + filenames[0]; 
         })
         .on('end', function () {
             console.log('Screenshots taken');
@@ -70,7 +68,6 @@ router.post("/thumbnail", (req, res) => {
             // Will take screens at 20%, 40%, 60% and 80% of the video
             count: 3,
             folder: 'uploads/thumbnails',
-            // folder: 'client/uploads/thumbnails',
             size:'320x240',
             // %b input basename ( filename w/o extension )
             filename:'thumbnail-%b.png'
