@@ -59,8 +59,8 @@ router.post("/thumbnail", (req, res) => {
     ffmpeg(req.body.filePath)
         .on('filenames', function (filenames) {
             console.log('Will generate ' + filenames.join(', '))
-            // thumbsFilePath = "uploads/thumbnails/" + filenames[0];
-            thumbsFilePath = "client/uploads/thumbnails/" + filenames[0]; 
+            thumbsFilePath = "uploads/thumbnails/" + filenames[0];
+            // thumbsFilePath = "client/uploads/thumbnails/" + filenames[0]; 
         })
         .on('end', function () {
             console.log('Screenshots taken');
